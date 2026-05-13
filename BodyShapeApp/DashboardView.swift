@@ -1,13 +1,6 @@
-//
-//  ContentView.swift
-//  BodyShapeApp
-//
-//  Created by Marios Kanellopoulos on 13/5/26.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct DashboardView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +13,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    DashboardView()
 }
