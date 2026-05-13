@@ -10,7 +10,7 @@ import SwiftUI
 struct ResultView: View {
     let selectedWeightUnits = "lb"
     var body: some View {
-        VStack(spacing: 30) {
+        VStack {
             VStack(spacing: 0) {
                 ResultsTopRow()
                     .padding()
@@ -48,18 +48,41 @@ struct ResultView: View {
                 )
             }
             
-            MainActivitiesView()
-            
-            HStack {
-                Text("Your plan for December, 2022")
+            VStack(spacing: 0) {
+                MainActivitiesView(activities: [
+                    .init(
+                        dim: 150,
+                        activityName: "Running",
+                        activityImage: "figure.run"
+                    ),
+                    .init(
+                        dim: 150,
+                        activityName: "Biking",
+                        activityImage: "figure.outdoor.cycle"
+                    ),
+                    .init(
+                        dim: 150,
+                        activityName: "Climbing",
+                        activityImage: "figure.climbing"
+                    ),
+                    .init(
+                        dim: 150,
+                        activityName: "Skating",
+                        activityImage: "figure.skating"
+                    )
+                ])
                 
-                Spacer()
-                
-                Text("1.8")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                Text(selectedWeightUnits)
-            }.padding(.horizontal)
+                HStack {
+                    Text("Your plan for December, 2022")
+                    
+                    Spacer()
+                    
+                    Text("1.8")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    Text(selectedWeightUnits)
+                }.padding(.horizontal)
+            }
             
             HeartRateRow()
             
