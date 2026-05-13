@@ -7,6 +7,12 @@ struct DashboardView: View {
                 imageName: "circle.grid.cross.fill",
                 angle: 45)
                 .padding()
+            
+            VStack(alignment: .leading, spacing: 20) {
+                WelcomeMessageView(username: "Emily")
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding()
                 
             Spacer()
         }
