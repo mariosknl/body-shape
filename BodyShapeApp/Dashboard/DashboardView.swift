@@ -12,6 +12,12 @@ struct DashboardView: View {
                 WelcomeMessageView(username: "Emily")
                 
                 WeightView(weight: 61.2, weightUnits: "lb")
+                
+                DataSummaryView(arrow: "arrow.down", calories: "4.569", numberOfPeopleShowing: 2)
+                
+                Spacer()
+                
+                ButtonsView()
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
